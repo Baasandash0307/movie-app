@@ -6,7 +6,7 @@ import Header from "./components/header";
 import Slideshow from "./components/slideshow";
 
 
-export default function HOME() {
+export default function Home() {
 
   const [movieList, setMovieList] = useState([])
 
