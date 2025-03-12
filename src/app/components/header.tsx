@@ -1,4 +1,21 @@
 
+import {
+  Select,
+  SelectContent,
+  SelectItem,
+  SelectTrigger,
+  SelectValue,
+} from "@/components/ui/select";
+// import {
+//   Carousel,
+//   CarouselContent,
+//   CarouselItem,
+//   CarouselNext,
+//   CarouselPrevious,
+// } from "@/components/ui/carousel"
+
+
+
 const Header = () => {
   return (
     <div className="w-full h-[59px] flex justify-around items-center">
@@ -7,12 +24,17 @@ const Header = () => {
         <p className="text-indigo-700 text-[16px] font-bold">Movie Z</p>
       </div>
       <div className="w-[438px] h-[36px] flex justify-center gap-3 ">
-        <select className="w-[97px] h-[36px] border-1 rounded-[8px] border-gray-300 outline-0" name="Genre" id="genre">
-          <option></option>
-          <option></option>
-          <option></option>
-        </select>
-        <div className="flex justify-between items-center gap-3 border-1 rounded-xl pl-4 border-gray-300">
+        <Select>
+          <SelectTrigger className="w-[180px]">
+            <SelectValue placeholder="Genre" />
+          </SelectTrigger>
+          <SelectContent>
+            <SelectItem value="light">Light</SelectItem>
+            <SelectItem value="dark">Dark</SelectItem>
+            <SelectItem value="system">System</SelectItem>
+          </SelectContent>
+        </Select>
+        <div className="flex justify-between items-center gap-3 border-1 rounded-[8px] pl-4 border-gray-300">
           <img className="w-[16px] h-4" src="magnifier.png"></img>
           <input className="w-[379px] h-[36px] outline-0" placeholder="Search" type="search"></input>
         </div>

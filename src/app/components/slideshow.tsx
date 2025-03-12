@@ -1,11 +1,26 @@
 
-const Slideshow = () => {
-    return (
-      <div className="pt-[24px]">
+// import {
+//   Carousel,
+//   CarouselContent,
+//   CarouselItem,
+//   CarouselNext,
+//   CarouselPrevious,
+// } from "@/components/ui/carousel"
 
-      </div>
-    );
-  };
-  
-  export default Slideshow;
-  
+const Slideshow = () => {
+  return (
+    <div>
+      {/* <Carousel>
+        <CarouselContent>
+          <CarouselItem></CarouselItem>
+          <CarouselItem></CarouselItem>
+          <CarouselItem></CarouselItem>
+        </CarouselContent>
+        <CarouselPrevious />
+        <CarouselNext />
+      </Carousel> */}
+    </div>
+  );
+};
+
+export default Slideshow;
