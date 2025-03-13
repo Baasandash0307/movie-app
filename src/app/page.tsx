@@ -22,7 +22,7 @@ export default function Home() {
     },
     headers: {
       accept: "application/json",
-      Authorization: `Bearer ${ACCESS_TOKEN}`,
+      Authorization: `Bearer ${ACCESS_TOKEN}`
     },
   };
   const getMovies = async () => {
