@@ -6,23 +6,18 @@ import {
   SelectTrigger,
   SelectValue,
 } from "@/components/ui/select";
-// import {
-//   Carousel,
-//   CarouselContent,
-//   CarouselItem,
-//   CarouselNext,
-//   CarouselPrevious,
-// } from "@/components/ui/carousel"
 
 
 
 const Header = () => {
   return (
-      <div className="w-[1280px] h-[59px] flex justify-around items-center">
-        <div className="w-[92px] h-[20px] flex justify-center items-center gap-2">
+    <div className="w-[1800px] h-[59px] mx-auto flex justify-between items-center">
+      
+        <div className="w-[92px] h-[20px] flex items-center gap-2">
           <img className="w-5 h-5" src="film.png"></img>
           <p className="text-indigo-700 text-[16px] font-bold">Movie Z</p>
         </div>
+        
         <div className="w-[438px] h-[36px] flex justify-center gap-3 ">
           <Select>
             <SelectTrigger className="w-[180px]">
@@ -39,10 +34,12 @@ const Header = () => {
             <input className="w-[379px] h-[36px] outline-0" placeholder="Search" type="search"></input>
           </div>
         </div>
+        
         <div className="w-[36px] h-[36px] border-[1px] flex justify-center items-center rounded-xl border-gray-300">
           <button className="cursor-pointer"><img className="w-[16px] h-[16px]" src="moon.png"></img></button>
         </div>
-      </div>
+      
+    </div>
   );
 };
 

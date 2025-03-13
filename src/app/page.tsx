@@ -5,7 +5,6 @@ import { useEffect, useState } from "react";
 import Header from "./components/header";
 import Slideshow from "./components/slideshow";
 
-
 export default function Home() {
 
   const [movieList, setMovieList] = useState([])
@@ -44,33 +43,46 @@ export default function Home() {
   }, [])
 
   return (
-    <div className="w-full">
+    <div className="flex justify-center">
       <div>
-        <div className="flex justify-center flex-wrap">
-          <Header></Header>
-          <Slideshow></Slideshow>
-          <div className="flex justify-between w-full">
-          <h1 className="text-[24px] font-bold">Upcoming</h1>
-          <div className="flex items-center gap-1">
-            <button>See More</button>
-            <img className="w-4 h-4" src="arrow-right.png"></img>
+        <div>
+          <div className="flex justify-center">
+            <Header></Header>
+          </div>
+
+          <div className="w-full h-[600px] pt-[24px]">
+            <Slideshow></Slideshow>
           </div>
         </div>
-        </div>
 
+        <div className="w-[1700px] mx-auto mt-[180px]">
+          <div className="flex justify-between">
+            <h1 className="text-[24px] font-bold">Upcoming</h1>
 
-        <div className="flex flex-wrap justify-center">
-          {movieList.splice(0, 10).map((movie) => (
-            <div>
-              {movie.poster_path && (
-                <img src={`https://image.tmdb.org/t/p/w300${movie.poster_path}`} alt={`${movie.title} Poster`}></img>
-              )}
-              <h1>{movie.title}</h1>
+            <div className="flex items-center gap-1">
+              <button>See More</button>
+              <img className="w-4 h-4" src="arrow-right.png"></img>
             </div>
-          ))}
+          </div>
+
+          <div className="flex flex-around flex-wrap pt-[32px]">
+            {movieList.slice(0, 10).map((movie) => (
+              <div>
+                {movie.poster_path && (
+                  <img className="rounded-xl w-auto h-[500px] gap-8" src={`https://image.tmdb.org/t/p/original${movie.poster_path}`} alt={`${movie.title} Poster`}></img>
+                )}
+                <div className="flex items-center gap-1">
+                  <img className="w-4 h-4" src="star.png"></img>
+                  <p className="font-bold">{movie.vote_average}</p>
+                  <p className="text-gray-500">/10</p>
+                </div>
+                
+                <h1 className="text-[18px] font-bold flex flex-wrap">{movie.title}</h1>
+              </div>
+            ))}
+          </div>
         </div>
       </div>
     </div>
   );
 }
-
