@@ -12,9 +12,9 @@ const Slideshow = () => {
     <div>
       <Carousel >
         <CarouselContent className="w-full h-[700px]">
-          <CarouselItem><img className="h-screen" src="slide1.jpg"></img></CarouselItem>
-          <CarouselItem><img src="slide1.jpg"></img></CarouselItem>
-          <CarouselItem><img src="slide1.jpg"></img></CarouselItem>
+          <CarouselItem>s</CarouselItem>
+          <CarouselItem>s</CarouselItem>
+          <CarouselItem>s</CarouselItem>
         </CarouselContent>
         <CarouselPrevious />
         <CarouselNext />
