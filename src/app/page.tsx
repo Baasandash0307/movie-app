@@ -45,6 +45,7 @@ export default function Home() {
 
   return (
     <div className="flex justify-center">
+      
       <div>
         <div>
           <div className="flex justify-center">
@@ -85,6 +86,7 @@ export default function Home() {
             ))}
           </div>
         </div>
+      
       </div>
     </div>
   );
