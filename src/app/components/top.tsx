@@ -18,7 +18,6 @@ const TopRated = () => {
                 },
             }
         );
-        console.log(movies)
         setMovieList(movies.data.results)
 
     };

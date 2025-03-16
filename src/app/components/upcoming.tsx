@@ -18,7 +18,6 @@ const Upcoming = () => {
                 },
             }
         );
-        console.log(movies)
         setMovieList(movies.data.results)
 
     };

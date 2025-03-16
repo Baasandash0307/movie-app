@@ -18,7 +18,6 @@ const Popular = () => {
                 },
             }
         );
-        console.log(movies)
         setMovieList(movies.data.results)
 
     };
