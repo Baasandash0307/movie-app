@@ -3,8 +3,6 @@ import {
   Carousel,
   CarouselContent,
   CarouselItem,
-  CarouselNext,
-  CarouselPrevious,
 } from "@/components/ui/carousel";
 import axios from "axios";
 import { useEffect, useState } from "react";
@@ -39,7 +37,7 @@ const Slideshow = () => {
   }, [movieList]);
 
   return (
-    <Carousel className="w-[2000px] flex justify-center mx-auto overflow-hidden mt-10">
+    <Carousel className="w-[1800px] flex justify-center mx-auto overflow-hidden mt-10">
       <CarouselContent
         className="w-full h-[800px] flex transition-transform duration-700 ease-in-out"
         style={{ transform: `translateX(-${currentIndex * 100}%)` }}
@@ -60,8 +58,6 @@ const Slideshow = () => {
           </CarouselItem>
         ))}
       </CarouselContent>
-      <CarouselPrevious onClick={() => setCurrentIndex((currentIndex - 1 + movieList.length) % movieList.length)} />
-      <CarouselNext onClick={() => setCurrentIndex((currentIndex + 1) % movieList.length)} />
     </Carousel>
   );
 };
