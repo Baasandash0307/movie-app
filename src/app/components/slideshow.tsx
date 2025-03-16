@@ -11,6 +11,7 @@ import { ACCESS_TOKEN } from "../constants";
 const Slideshow = () => {
   const [movieList, setMovieList] = useState([]);
   const [currentIndex, setCurrentIndex] = useState(0);
+  const [trailer, setTrailer] = useState([]);
 
   const getMovies = async () => {
     const movies = await axios.get(
@@ -26,6 +27,23 @@ const Slideshow = () => {
 
   useEffect(() => {
     getMovies();
+  }, []);
+
+  const getTrailer = async () => {
+    const trailer = await axios.get(
+      "https://api.themoviedb.org/3/movie/${id}/videos?language=en-US",
+      {
+        headers: {
+          Authorization: `Bearer ${ACCESS_TOKEN}`,
+        },
+      }
+    );
+    console.log(trailer);
+    
+    setTrailer(); 
+  };
+  useEffect(() => {
+    getTrailer();
   }, []);
 
   useEffect(() => {
