@@ -16,11 +16,13 @@ const Footer = () => {
           <div>
             <p>Contact Information </p>
             <div className="mt-3">
+              <img className="w-4 h-4 border-white" src="email.png"></img>
               <p>Email:</p>
               <p>support@movieZ.com</p>
             </div>
 
             <div className="mt-3">
+              <img className="w-4 h-4" src="telephone.png"></img>
               <p>Phone:</p>
               <p>+976 (11) 123-4567</p>
             </div>
