@@ -36,7 +36,7 @@ const Popular = () => {
                 </div>
             </div>
 
-            <div className="grid grid-cols-5 pt-[32px] gap-[33px]">
+            <div className="grid lg:grid-cols-5 grid-cols-2 mx-auto pt-[32px] gap-[33px]">
                 {movieList.slice(0, 10).map((movieList) => (
                     <div>
                         {movieList.poster_path && (

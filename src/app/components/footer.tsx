@@ -1,7 +1,7 @@
 const Footer = () => {
   return (
-    <div className="w-full h-[280px] bg-indigo-700 text-white mt-20 flex justify-center items-center">
-      <div className="w-[1800px] h-[200px] ml-27 flex justify-between">
+    <div className="w-screen h-[280px] bg-indigo-700 text-white mt-20 flex justify-center items-center">
+      <div className="w-screen h-[200px] ml-27 flex justify-between">
         <div className="w-[247px] h-200px">
           <div className="w-[300px]">
             <div className="flex items-center gap-2">

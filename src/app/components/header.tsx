@@ -27,6 +27,7 @@ const Header = () => {
     getGenreList();
   }, []);
 
+
   return (
     <div className="w-[1700px] h-[59px] mx-auto flex justify-between items-center">
       <div className="w-[92px] h-[20px] flex items-center gap-2">
@@ -46,18 +47,19 @@ const Header = () => {
             </div>
 
             <div className="grid grid-cols-5 gap-4">
-            {
-              genreList.map(genre => <SelectItem className="border-1 rounded-xl mt-1" value={genre.id}>{genre.name}</SelectItem>)
-            }
+              {
+                genreList.map(genre => <SelectItem className="border-1 rounded-xl mt-1" value={genre.id}>{genre.name}</SelectItem>)
+              }
             </div>
           </SelectContent>
         </Select>
+
         <div className="flex justify-between items-center gap-3 border-1 rounded-[8px] pl-4 border-gray-300">
           <img className="w-[16px] h-4" src="magnifier.png"></img>
           <input
             className="w-[379px] h-[36px] outline-0"
             placeholder="Search"
-            type="search"
+            type="Search"
           ></input>
         </div>
       </div>

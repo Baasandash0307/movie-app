@@ -36,11 +36,11 @@ const TopRated = () => {
                 </div>
             </div>
 
-            <div className="grid grid-cols-5 pt-[32px] gap-[33px]">
+            <div className="grid lg:grid-cols-5 grid-cols-2 mx-auto pt-[32px] gap-[33px]">
                 {movieList.slice(0, 10).map((movieList) => (
                     <div>
                         {movieList.poster_path && (
-                            <img className="rounded-tl-xl rounded-tr-xl w-auto h-[500px] gap-8" src={`https://image.tmdb.org/t/p/original${movieList.poster_path}`} alt={`${movieList.title} Poster`}></img>
+                            <img className="rounded-tl-xl rounded-tr-xl  h-[500px] w-auto gap-8" src={`https://image.tmdb.org/t/p/original${movieList.poster_path}`} alt={`${movieList.title} Poster`}></img>
                         )}
                         <div className="flex items-center gap-1 pt-3 pl-4 bg-gray-100">
                             <img className="w-4 h-4" src="star.png"></img>

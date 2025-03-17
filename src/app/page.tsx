@@ -1,14 +1,11 @@
 'use client'
 
-import axios from "axios";
 import Footer from "./components/footer";
 import Header from "./components/header";
 import Popular from "./components/popular";
 import Slideshow from "./components/slideshow";
 import TopRated from "./components/top";
 import Upcoming from "./components/upcoming";
-import { ACCESS_TOKEN } from "./constants";
-import { useEffect, useState } from "react";
 
 export default function Home() {
 
