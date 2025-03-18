@@ -20,7 +20,7 @@ export default function Home() {
   //     sort_by: "popularity.desc",
   //   },
   //   headers: {
-  //     accept: "application/json",
+  //     accept: "application/json",  
   //     Authorization: `Bearer ${ACCESS_TOKEN}`
   //   },
   // };

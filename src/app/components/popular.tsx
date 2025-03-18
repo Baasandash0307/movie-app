@@ -35,7 +35,7 @@ const Popular = () => {
                     <Link href="/movies/popular">
                         <button className="cursor-pointer" type="submit">See More</button>
                     </Link>
-                    <img className="w-4 h-4" src="arrow-right.png"></img>
+                    <img className="w-4 h-4" src="/arrow-right.png"></img>
                 </div>
             </div>
 
@@ -46,7 +46,7 @@ const Popular = () => {
                             <img className="rounded-tl-xl rounded-tr-xl w-auto h-[500px] gap-8" src={`https://image.tmdb.org/t/p/original${movieList.poster_path}`} alt={`${movieList.title} Poster`}></img>
                         )}
                         <div className="flex items-center gap-1 pt-3 pl-4 bg-gray-100">
-                            <img className="w-4 h-4" src="star.png"></img>
+                            <img className="w-4 h-4" src="/star.png"></img>
                             <p className="font-bold">{movieList.vote_average}</p>
                             <p className="text-gray-500">/10</p>
                         </div>
