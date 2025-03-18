@@ -3,6 +3,8 @@ import {
   Carousel,
   CarouselContent,
   CarouselItem,
+  CarouselNext,
+  CarouselPrevious,
 } from "@/components/ui/carousel";
 import axios from "axios";
 import { useEffect, useState } from "react";
@@ -21,7 +23,7 @@ const Slideshow = () => {
         },
       }
     );
-    setMovieList(movies.data.results.slice(0, 4)); 
+    setMovieList(movies.data.results.slice(0, 4));
   };
 
   useEffect(() => {
@@ -31,12 +33,13 @@ const Slideshow = () => {
   useEffect(() => {
     const interval = setInterval(() => {
       setCurrentIndex((prevIndex) => (prevIndex + 1) % movieList.length);
-    }, 3000); 
+    }, 3000);
 
     return () => clearInterval(interval);
   }, [movieList]);
 
   return (
+
     <Carousel className="w-[1800px] flex justify-center mx-auto overflow-hidden mt-10">
       <CarouselContent
         className="w-full h-[800px] flex transition-transform duration-700 ease-in-out"
