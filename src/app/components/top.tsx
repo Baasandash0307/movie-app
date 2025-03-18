@@ -3,6 +3,7 @@
 import { useEffect, useState } from "react";
 import { ACCESS_TOKEN } from "../constants";
 import axios from "axios";
+import Link from "next/link";
 
 
 const TopRated = () => {
@@ -31,7 +32,9 @@ const TopRated = () => {
                 <h1 className="text-[24px] font-bold">Top Rated</h1>
 
                 <div className="flex items-center gap-1">
-                    <button className="cursor-pointer" type="submit">See More</button>
+                    <Link href={"/movies/top"}>
+                        <button className="cursor-pointer" type="submit">See More</button>
+                    </Link>
                     <img className="w-4 h-4" src="arrow-right.png"></img>
                 </div>
             </div>

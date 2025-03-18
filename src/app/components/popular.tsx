@@ -3,6 +3,7 @@
 import { useEffect, useState } from "react";
 import { ACCESS_TOKEN } from "../constants";
 import axios from "axios";
+import Link from "next/link";
 
 
 const Popular = () => {
@@ -31,7 +32,9 @@ const Popular = () => {
                 <h1 className="text-[24px] font-bold">Popular</h1>
 
                 <div className="flex items-center gap-1">
-                    <button className="cursor-pointer" type="submit">See More</button>
+                    <Link href="/movies/popular">
+                        <button className="cursor-pointer" type="submit">See More</button>
+                    </Link>
                     <img className="w-4 h-4" src="arrow-right.png"></img>
                 </div>
             </div>
