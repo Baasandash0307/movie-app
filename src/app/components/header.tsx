@@ -53,7 +53,7 @@ const Header = () => {
 
             <div className="grid grid-cols-5 gap-4 mt-7">
               {genreList.map((genre) => (
-                <Link className="border-1 rounded-xl flex justify-center w-auto text-[12px] font-bold items-center gap-1" href={"/genres/" + genre.id}>{genre.name}<img className="w-4 h-4" src="chevron.png"></img></Link>
+                <Link className="border-1 rounded-xl flex justify-center w-auto text-[12px] font-bold items-center gap-1" href={"/genres/" + genre.id + `?name=${genre.name}`}>{genre.name}<img className="w-4 h-4" src="/chevron.png"></img></Link>
               ))}
             </div>
 
