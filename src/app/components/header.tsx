@@ -8,6 +8,7 @@ import {
 import { useEffect, useState } from "react";
 import { ACCESS_TOKEN } from "../constants";
 import axios from "axios";
+import Link from "next/link";
 
 const Header = () => {
   const [genreList, setGenreList] = useState([]);
@@ -40,17 +41,22 @@ const Header = () => {
           <SelectTrigger className="w-[180px]">
             <SelectValue placeholder="Genre" />
           </SelectTrigger>
-          <SelectContent className="w-[577px] h-[333px] p-[8px]">
+          <SelectContent className="w-[577px] h-[300px] p-[8px]">
             <div>
               <h1 className="text-[24px] font-bold">Genres</h1>
               <p className="text-[16px]">See lists of movies by genre</p>
             </div>
 
-            <div className="grid grid-cols-5 gap-4">
-              {
-                genreList.map(genre => <SelectItem className="border-1 rounded-xl mt-1" value={genre.id}>{genre.name}</SelectItem>)
-              }
+            <div className="border-1 mt-5">
+
             </div>
+
+            <div className="grid grid-cols-5 gap-4 mt-7">
+              {genreList.map((genre) => (
+                <Link className="border-1 rounded-xl flex justify-center w-auto text-[12px] font-bold items-center gap-1" href={"/genres/" + genre.id}>{genre.name}<img className="w-4 h-4" src="chevron.png"></img></Link>
+              ))}
+            </div>
+
           </SelectContent>
         </Select>
 
