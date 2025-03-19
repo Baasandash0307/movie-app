@@ -76,6 +76,7 @@ const Header = () => {
         </div>
       </div>
 
+
       <div className="w-[36px] h-[36px] border-[1px] flex justify-center items-center rounded-xl border-gray-300">
         <button className="cursor-pointer">
           <img className="w-[16px] h-[16px]" src="/moon.png"></img>
