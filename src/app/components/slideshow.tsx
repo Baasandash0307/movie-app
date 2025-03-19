@@ -42,7 +42,7 @@ const Slideshow = () => {
 
     <Carousel className="w-[1800px] flex justify-center mx-auto overflow-hidden mt-10">
       <CarouselContent
-        className="w-full h-[800px] flex transition-transform duration-700 ease-in-out"
+        className="w-full h-[700px] flex transition-transform duration-700 ease-in-out"
         style={{ transform: `translateX(-${currentIndex * 100}%)` }}
       >
         {movieList.map((movie) => (
@@ -56,7 +56,7 @@ const Slideshow = () => {
                 <p className="text-gray-500">/10</p>
               </div>
               <p className="mt-3">{movie.overview}</p>
-            </div>
+            </div>  
             <img src={`https://image.tmdb.org/t/p/original${movie.poster_path}`} alt={movie.title} />
           </CarouselItem>
         ))}

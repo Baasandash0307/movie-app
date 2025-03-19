@@ -52,7 +52,7 @@ const Upcoming = () => {
                             <p className="text-gray-500">/10</p>
                         </div>
 
-                        <div className=" h-[100px] bg-gray-100 rounded-bl-xl pl-4 pt-[2px] rounded-br-xl">
+                        <div className=" h-[100px] bg-gray-100 rounded-bl-xl pl-4 pt-[2px] rounded-br-xl ">
                             <h1 className="text-[20px] font-bold flex flex-wrap">{movieList.title}</h1>
                         </div>
                     </button>
