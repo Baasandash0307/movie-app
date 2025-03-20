@@ -7,6 +7,17 @@ import React from 'react'
 import Header from "@/app/components/header";
 import Footer from "@/app/components/footer";
 
+import {
+  Pagination,
+  PaginationContent,
+  PaginationEllipsis,
+  PaginationItem,
+  PaginationLink,
+  PaginationNext,
+  PaginationPrevious,
+} from "@/components/ui/pagination"
+
+
 const More = () => {
 
   const [movieList, setMovieList] = useState([])
@@ -32,6 +43,7 @@ const More = () => {
       <div>
         <Header></Header>
       </div>
+
       <div className="w-[1700px] mx-auto mt-[40px]">
         <div className="flex justify-between">
           <h1 className="text-[24px] font-bold">Upcoming</h1>
@@ -57,6 +69,25 @@ const More = () => {
           ))}
         </div>
       </div>
+
+      <Pagination>
+        <PaginationContent>
+          <PaginationItem>
+            <PaginationPrevious href="#" />
+          </PaginationItem>
+          <PaginationItem>
+            <PaginationLink href="#">1</PaginationLink>
+          </PaginationItem>
+          <PaginationItem>
+            <PaginationEllipsis />
+          </PaginationItem>
+          <PaginationItem>
+            <PaginationNext href="#" />
+          </PaginationItem>
+        </PaginationContent>
+      </Pagination>
+
+
       <div>
         <Footer></Footer>
       </div>
