@@ -21,7 +21,7 @@ const Slideshow = () => {
         },
       }
     );
-    setMovieList(movies.data.results.slice(0, 4));
+    setMovieList(movies.data.results.slice(0, 3));
   };
 
   const getTrailerUrl = async (movieId) => {
@@ -33,7 +33,7 @@ const Slideshow = () => {
         },
       }
     );
-    const trailer = response.data.results.find((video) => video.type === "Trailer" && video.site === "YouTube");
+    const trailer = response.data.results.find((video: { type: string; site: string; }) => video.type === "Trailer" && video.site === "YouTube");
     return trailer ? `https://www.youtube.com/watch?v=${trailer.key}` : "#";
   };
 

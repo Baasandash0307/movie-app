@@ -17,7 +17,6 @@ export default function Genre() {
 
     const [page, setPage] = useState(1);
     const [movies, setMovies] = useState([]);
-    const [isLoading, setIsLoading] = useState(true)
 
     const getMoviesByGenre = async () => {
         const res = await axios.get('https://api.themoviedb.org/3/' +
@@ -34,7 +33,6 @@ export default function Genre() {
     }
     useEffect(() => {
         getMoviesByGenre();
-        setIsLoading(false)
     }, [])
 
     return (
@@ -43,15 +41,16 @@ export default function Genre() {
                 <Header />
             </div>
             <div className="w-[1700px] mx-auto">
+
                 <div className="text-[24px] font-bold">
                     <h1>{genreName}</h1>
                 </div>
 
                 <div className="grid lg:grid-cols-5 grid-cols-2 mx-auto pt-[32px] gap-[33px]">
-                    {!isLoading && movies.map((movies) => (
+                    {movies.map((movies) => (
                         <button className="cursor-pointer">
                             {movies.poster_path && (
-                                <img className="rounded-tl-xl rounded-tr-xl  h-[500px] w-auto gap-8" src={`https://image.tmdb.org/t/p/original${movies.poster_path}`}></img>
+                                <img className="rounded-tl-xl rounded-tr-xl w-auto gap-8" src={`https://image.tmdb.org/t/p/original${movies.poster_path}`}></img>
                             )}
                             <div className="flex items-center gap-1 pt-3 pl-4 bg-gray-100">
                                 <img className="w-4 h-4" src="/star.png"></img>
@@ -64,8 +63,8 @@ export default function Genre() {
                             </div>
                         </button>
                     ))}
-                    {isLoading && <div className="text-2xl">Loading...</div>}
                 </div>
+
             </div>
             <div>
                 <Footer />
