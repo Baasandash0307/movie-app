@@ -56,6 +56,7 @@ const Upcoming = () => {
                             <h1 className="text-[20px] font-bold flex flex-wrap">{movieList.title}</h1>
                         </div>
                     </button>
+
                 ))}
             </div>
         </div>

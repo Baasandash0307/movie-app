@@ -6,6 +6,7 @@ import Popular from "./components/popular";
 import Slideshow from "./components/slideshow";
 import TopRated from "./components/top";
 import Upcoming from "./components/upcoming";
+import Link from "next/link";
 
 export default function Home() {
 
@@ -20,17 +21,17 @@ export default function Home() {
           <Slideshow></Slideshow>
         </div>
 
-        <div>
-          <Upcoming></Upcoming>
-        </div>
+          <div>
+            <Upcoming></Upcoming>
+          </div>
 
-        <div>
-          <Popular></Popular>
-        </div>
+          <div>
+            <Popular></Popular>
+          </div>
 
-        <div>
-          <TopRated></TopRated>
-        </div>
+          <div>
+            <TopRated></TopRated>
+          </div>
       </div>
 
       <div>

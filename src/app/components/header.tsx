@@ -30,7 +30,7 @@ const Header = () => {
 
   return (
     <div className="w-[1700px] h-[59px] mx-auto flex justify-between items-center">
-      <Link href="/" passHref>
+      <Link href="/">
         <button className="cursor-pointer">
           <div className="w-[92px] h-[20px] flex items-center gap-2">
             <img className="w-5 h-5" src="/film.png" alt="logo" />

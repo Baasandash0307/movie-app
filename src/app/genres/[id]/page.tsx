@@ -7,7 +7,6 @@ import { useParams, useSearchParams } from "next/navigation"
 import { useEffect, useState } from "react";
 import Header from "@/app/components/header";
 import Footer from "@/app/components/footer";
-import Head from "next/head";
 
 export default function Genre() {
     const params = useParams();
@@ -30,8 +29,7 @@ export default function Genre() {
             }
         );
         console.log(res)
-        setMovies(res.data.results)
-        console.log(res.data.results);
+        setMovies(res.data.results);
 
     }
     useEffect(() => {
