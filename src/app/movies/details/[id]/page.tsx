@@ -37,38 +37,47 @@ const Details = () => {
         <Header></Header>
       </div>
 
-      <div>
+      <div className='w-[1300px] mx-auto'>
         <div>
-          <h1>{details.title}</h1>
-          <p>{details.release_date}</p>
-          <p>{details.runtime}min</p>
+          <h1 className='text-[36px] font-bold'>{details.title}</h1>
+
+          <div className='flex justify-between items-center'>
+            <div className='flex gap-2'>
+              <p>{details.release_date}</p>
+              <p>•</p>
+              <p>{details.runtime}min</p>
+            </div>
+
+            <div>
+              <p className='text-[12px]'>Rating</p>
+              <div className='flex'>
+                <div className='flex'>
+                  <img className='w-[30x] h-[30px]' src='/star.png'></img>
+                </div>
+                <div>
+                  <div className='flex'>
+                    <p className='text-[18px] font-bold'>{details.vote_average}</p>
+                    <p className='text-[18px] text-gray-400'>/10</p>
+                  </div>
+                  <p className='text-gray-400'>{details.vote_count}</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div className='flex justify-center'>
+            {details.poster_path && (
+              <img className="rounded-[8px] w-[1300px]" src={`https://image.tmdb.org/t/p/original${details.backdrop_path}`}></img>
+            )}
+          </div>
         </div>
 
-        <div>
-          <p>Rating</p>
-          <img src='/star.png'></img>
-          <p>{details.vote_average}/10</p>
-          <p>{details.vote_count}</p>
-        </div>
+        <div className='border-1 border-gray-300 mt-8'></div>
 
-        <div>
-          {details.poster_path && (
-            <img className="rounded-[8px] w-[1000px]" src={`https://image.tmdb.org/t/p/original${details.backdrop_path}`}></img>
-          )}
-        </div>
-      </div>
-
-      <div>
-        {/* {details.genres.map((asd) => (
-          <p>{asd}</p>
-        ))} */}
-
-        <div>
-          <p>{details.overview}</p>
-        </div>
-
-        <div>
-          
+        <div className='mt-6'>
+          <div>
+            <p className='text-[16px]'>{details.overview}</p>
+          </div>
         </div>
       </div>
 
