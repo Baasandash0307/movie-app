@@ -14,21 +14,16 @@ const Header = () => {
   const [genreList, setGenreList] = useState([]);
 
   const getGenreList = async () => {
-    try {
-      const response = await axios.get(
-        "https://api.themoviedb.org/3/genre/movie/list?language=en",
-        {
-          headers: {
-            Authorization: `Bearer ${ACCESS_TOKEN}`,
-          },
-        }
-      );
-      setGenreList(response.data.genres || []); 
-    } catch (error) {
-      console.error("Error fetching genres:", error);
-    }
+    const genres = await axios.get(
+      "https://api.themoviedb.org/3/genre/movie/list?language=en",
+      {
+        headers: {
+          Authorization: `Bearer ${ACCESS_TOKEN}`,
+        },
+      }
+    );
+    setGenreList(genres.data.genres);
   };
-
   useEffect(() => {
     getGenreList();
   }, []);
@@ -58,14 +53,13 @@ const Header = () => {
             <div className="border-1 mt-5"></div>
 
             <div className="grid grid-cols-5 gap-4 mt-7">
-              {genreList?.map((genre) => (
+              {genreList.map((genre) => (
                 <Link
-                  key={genre.id} 
                   className="border-1 rounded-xl flex justify-center w-auto text-[12px] font-bold items-center gap-1"
-                  href={`/genres/${genre.id}?name=${encodeURIComponent(genre.name)}`} 
+                  href={"/genres/" + genre.id + `?name=${genre.name}`}
                 >
                   {genre.name}
-                  <img className="w-4 h-4" src="/chevron.png" alt="chevron" />
+                  <img className="w-4 h-4" src="/chevron.png"></img>
                 </Link>
               ))}
             </div>
@@ -73,18 +67,19 @@ const Header = () => {
         </Select>
 
         <div className="flex justify-between items-center gap-3 border-1 rounded-[8px] pl-4 border-gray-300">
-          <img className="w-[16px] h-4" src="/magnifier.png" alt="search" />
+          <img className="w-[16px] h-4" src="/magnifier.png"></img>
           <input
             className="w-[379px] h-[36px] outline-0"
             placeholder="Search"
-            type="search"
-          />
+            type="Search"
+          ></input>
         </div>
       </div>
 
+
       <div className="w-[36px] h-[36px] border-[1px] flex justify-center items-center rounded-xl border-gray-300">
         <button className="cursor-pointer">
-          <img className="w-[16px] h-[16px]" src="/moon.png" alt="theme toggle" />
+          <img className="w-[16px] h-[16px]" src="/moon.png"></img>
         </button>
       </div>
     </div>
