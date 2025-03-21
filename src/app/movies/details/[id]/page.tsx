@@ -59,7 +59,7 @@ const Details = () => {
                     <p className='text-[18px] font-bold'>{details.vote_average}</p>
                     <p className='text-[18px] text-gray-400'>/10</p>
                   </div>
-                  <p className='text-gray-400'>{details.vote_count}</p>
+                  <p className='text-gray-400'>{details.vote_count} vote(s)</p>
                 </div>
               </div>
             </div>

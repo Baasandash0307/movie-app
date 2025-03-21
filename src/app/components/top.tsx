@@ -41,7 +41,7 @@ const TopRated = () => {
 
             <div className="grid lg:grid-cols-5 grid-cols-2 mx-auto pt-[32px] gap-[33px]">
                 {movieList.slice(0, 10).map((movieList) => (
-                    <Link href={'/movies/details'}>
+                    <Link href={"/movies/details/" + movieList.id + `?name=${movieList.name}`}>
                         <button className="cursor-pointer">
                             {movieList.poster_path && (
                                 <img className="rounded-tl-xl rounded-tr-xl w-auto h-[500px] gap-8" src={`https://image.tmdb.org/t/p/original${movieList.poster_path}`} alt={`${movieList.title} Poster`}></img>
