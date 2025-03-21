@@ -11,6 +11,7 @@ const Details = () => {
   const params = useParams();
   const searchParams = useSearchParams();
   const [details, setDetails] = useState([]);
+  const [more, setMore] = useState([]);
 
 
   const getMoviesById = async () => {
@@ -22,13 +23,25 @@ const Details = () => {
         },
       }
     );
-    console.log(res)
     setDetails(res.data);
-
+  }
+  const getMoreLikeThis = async () => {
+    const res = await axios.get('https://api.themoviedb.org/3/' +
+      `/movie/${params.id}/similar?language=en-US&page=2`,
+      {
+        headers: {
+          Authorization: `Bearer ${ACCESS_TOKEN}`,
+        },
+      }
+    );
+    setMore(res.data);
+    console.log(res);
 
   }
+
   useEffect(() => {
     getMoviesById();
+    getMoreLikeThis();
   }, [])
 
   return (
