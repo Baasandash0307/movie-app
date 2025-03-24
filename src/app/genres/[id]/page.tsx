@@ -1,4 +1,3 @@
-
 'use client'
 
 import { ACCESS_TOKEN } from "@/app/constants";
@@ -50,7 +49,6 @@ export default function Genre() {
                 <div className="grid lg:grid-cols-5 grid-cols-2 mx-auto pt-[32px] gap-[33px]">
 
                     {movies.map((movies) => (
-
                         <button className="cursor-pointer">
                             {movies.poster_path && (
                                 <img className="rounded-tl-xl rounded-tr-xl w-auto gap-8" src={`https://image.tmdb.org/t/p/original${movies.poster_path}`}></img>
@@ -65,7 +63,6 @@ export default function Genre() {
                                 <h1 className="text-[20px] font-bold flex flex-wrap">{movies.title}</h1>
                             </div>
                         </button>
-
                     ))}
 
                 </div>

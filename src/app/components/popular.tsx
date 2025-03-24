@@ -50,7 +50,7 @@ const Popular = () => {
                                 <img className="w-4 h-4" src="/star.png"></img>
                                 <p className="font-bold">{movieList.vote_average}</p>
                                 <p className="text-gray-500">/10</p>
-                            </div>
+                            </div>  
 
                             <div className=" h-[100px] bg-gray-100 rounded-bl-xl pl-4 pt-[2px] rounded-br-xl">
                                 <h1 className="text-[20px] font-bold flex flex-wrap">{movieList.title}</h1>
